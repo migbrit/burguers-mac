@@ -24,25 +24,35 @@ namespace LanchesMac.Controllers
             }
             else
             {
-                if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches
-                        .Where(l => l.Categoria.CategoriaNome.Equals("Normal"))
-                        .OrderBy(l => l.Nome);
-                    categoriaAtual = categoria;
-                }
-                else if(string.Equals("Natural", categoria, StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches
-                        .Where(l => l.Categoria.CategoriaNome.Equals("Natural"))
-                        .OrderBy(l => l.Nome);
-                    categoriaAtual = categoria;
-                }
-                else
-                {
-                    lanches = _lancheRepository.Lanches.OrderBy(l => l.LancheId);
-                    categoriaAtual = "Todos os lanches";
-                }             
+                // Solução ruim
+
+                //if (string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
+                //{
+                //    lanches = _lancheRepository.Lanches
+                //        .Where(l => l.Categoria.CategoriaNome.Equals("Normal"))
+                //        .OrderBy(l => l.Nome);
+                //    categoriaAtual = categoria;
+                //}
+                //else if(string.Equals("Natural", categoria, StringComparison.OrdinalIgnoreCase))
+                //{
+                //    lanches = _lancheRepository.Lanches
+                //        .Where(l => l.Categoria.CategoriaNome.Equals("Natural"))
+                //        .OrderBy(l => l.Nome);
+                //    categoriaAtual = categoria;
+                //}
+                //else
+                //{
+                //    lanches = _lancheRepository.Lanches.OrderBy(l => l.LancheId);
+                //    categoriaAtual = "Todos os lanches";
+                //} 
+
+                // Solução mais adequada
+                lanches = _lancheRepository.Lanches
+                    .Where(l => l.Categoria.CategoriaNome
+                    .Equals(categoria))
+                    .OrderBy(c => c.Nome);
+
+                categoriaAtual = categoria;
             }
 
             var lanchesListViewModel = new LancheListViewModel
@@ -52,6 +62,11 @@ namespace LanchesMac.Controllers
             };
 
             return View(lanchesListViewModel);
+        }
+        public IActionResult Details(int lancheId)
+        {
+            var lanche = _lancheRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
+            return View(lanche);
         }
     }
 }
