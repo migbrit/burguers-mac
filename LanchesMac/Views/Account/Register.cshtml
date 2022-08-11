@@ -1,0 +1,45 @@
+﻿@model LoginViewModel
+
+<table class="table">
+    <tr>
+        <td>
+            <img src="~/images/registro1.jpg" width=80px height=70px alt="Imagem de registro" class="center-block" />
+        </td>
+
+        <td>
+            <div class="row">
+                <h4>Registrar usuário</h4>
+                <div class="col-md-12 col-lg-12">
+                    <form asp-controller="Account" asp-action="Register" method="post" class="form-horizontal" role="form">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        
+                        <div class="form-group">
+                            <label asp-for="UserName" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input asp-for="UserName" class="form-control"/>
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Password" class="col-md-2 control-label"></label>
+                            <div class="col-md-6">
+                                <input asp-for="Password" class="form-control"/>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <input type="submit" class="btn btn-success" value="Registrar"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </td>
+    </tr>
+</table>

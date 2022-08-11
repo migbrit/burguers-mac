@@ -2,6 +2,7 @@
 using LanchesMac.Repositories.Interfaces;
 using LanchesMac.Models;
 using LanchesMac.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LanchesMac.Controllers
 {
@@ -30,7 +31,7 @@ namespace LanchesMac.Controllers
 
             return View(carrinhoCompraVM);
         }
-
+        [Authorize]
         //método que adiciona itens no carrinho de compras
         public IActionResult AdicionarItemNoCarrinhoCompra(int lancheId)
         {
@@ -42,6 +43,7 @@ namespace LanchesMac.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         //método que retira itens no carrinho de compras
         public IActionResult RemoverItemDoCarrinhoCompra(int lancheId)
         {
