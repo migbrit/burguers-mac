@@ -5,6 +5,8 @@ using LanchesMac.Repositories;
 using LanchesMac.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
+using LanchesMac.Areas.Admin.Services;
 namespace LanchesMac;
 public class Startup
 {
@@ -29,6 +31,7 @@ public class Startup
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+        services.AddScoped<RelatorioVendasService>();
 
         services.AddAuthorization(options => { options.AddPolicy("Admin",politica => {politica.RequireRole("Admin");});});
 
@@ -36,6 +39,7 @@ public class Startup
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();
+        services.AddPaging(options => { options.ViewName = "Bootstrap4"; options.PageParameterName = "pageindex"; });
 
         services.AddMemoryCache();
         services.AddSession();
