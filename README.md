@@ -7,7 +7,7 @@
 ## 💻 Prerequisites
 
 Before you start, verify if you have the following requisites:
-* You installed the most recent version of `<.NET package depedency>`
+* You installed the most recent version of `<.NET package dependency>`
 * You have a computer with `<Windows / Linux / Mac>`.
 
 ## 🚀 Installing Burguers Mac
