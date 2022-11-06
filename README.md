@@ -1,7 +1,10 @@
 # Burguers Mac
 
-> This is a website project that has a lot of cool features for a burguer's website, it has the administrator area, the selling area and integration with a database, I used SQL Server, Entity Framework and ASP.NET to build this web site, download the project and test yourself!
+> This is a website project that has a lot of cool features for a burguer's website, it has the administrator area, the selling area and integration with a database, download the project and test yourself!
 
+> ASP.NET, C#, SQL SERVER, Entity Framework, LINQ, HTML, CSS
+
+> ASP.NET, C#, Entity Framework, MySQL, LINQ, HTML, CSS
 ## 💻 Prerequisites
 
 Before you start, verify if you have the following requisites:
