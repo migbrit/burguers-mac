@@ -4,7 +4,6 @@
 
 > ASP.NET, C#, SQL SERVER, Entity Framework, LINQ, HTML, CSS
 
-> ASP.NET, C#, Entity Framework, MySQL, LINQ, HTML, CSS
 ## 💻 Prerequisites
 
 Before you start, verify if you have the following requisites:
