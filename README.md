@@ -5,7 +5,7 @@
 Home
 ![Home](https://user-images.githubusercontent.com/83079059/200151007-6c340b97-0ed3-4bac-9fbf-6a465a876f5b.PNG)
 
-![Home2](https://user-images.githubusercontent.com/83079059/200151154-6e3972e4-a550-41f3-b438-4d14e5ed7ca9.PNG)
+![Home2](https://user-images.githubusercontent.com/83079059/200151235-d0529edb-2d64-4fcd-bfce-48ab26bbdbbe.PNG)
 
 
 ## 💻 Prerequisites
@@ -23,4 +23,5 @@ Windows, Linux and macOS:
 git clone https://github.com/migbrit/burguers-mac.git
 
 ```
+
 
