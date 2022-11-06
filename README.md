@@ -2,7 +2,7 @@
 
 > This is a website project that has a lot of cool features for a burguer's website, it has the administrator area, the selling area and integration with a database, download the project and test yourself!
 
-> ASP.NET, C#, SQL SERVER, Entity Framework, LINQ, HTML, CSS
+> ASP.NET CORE, C#, SQL SERVER, Entity Framework, LINQ, HTML, CSS
 
 ## 💻 Prerequisites
 
