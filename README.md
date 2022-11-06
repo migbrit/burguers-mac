@@ -2,11 +2,6 @@
 
 > This is a website project that has a lot of cool features for a burguer's website, it has the administrator area, the selling area and integration with a database, I used SQL Server, Entity Framework and ASP.NET to build this web site, download the project and test yourself!
 
-Home
-![Home](https://user-images.githubusercontent.com/83079059/200151007-6c340b97-0ed3-4bac-9fbf-6a465a876f5b.PNG)
-![Home2](https://user-images.githubusercontent.com/83079059/200151235-d0529edb-2d64-4fcd-bfce-48ab26bbdbbe.PNG)
-
-
 ## 💻 Prerequisites
 
 Before you start, verify if you have the following requisites:
@@ -22,5 +17,12 @@ Windows, Linux and macOS:
 git clone https://github.com/migbrit/burguers-mac.git
 
 ```
+
+Home
+![Home](https://user-images.githubusercontent.com/83079059/200151007-6c340b97-0ed3-4bac-9fbf-6a465a876f5b.PNG)
+![Home2](https://user-images.githubusercontent.com/83079059/200151235-d0529edb-2d64-4fcd-bfce-48ab26bbdbbe.PNG)
+
+
+
 
 
