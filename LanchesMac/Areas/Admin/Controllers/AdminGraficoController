@@ -1,0 +1,41 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using LanchesMac.Areas.Admin.Services;
+
+namespace LanchesMac.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    [Authorize("Admin")]
+    public class AdminGraficoController : Controller
+    {
+        private readonly GraficosVendaService _graficosVendaService;
+        public AdminGraficoController(GraficosVendaService graficosVendaService)
+        {
+            _graficosVendaService = graficosVendaService;
+        }
+
+        public JsonResult VendasLanches(int dias)
+        {
+            var lanchesVendasTotais = _graficosVendaService.GetVendasLanche(dias);
+            return Json(lanchesVendasTotais);
+        } 
+
+        [HttpGet]
+        public IActionResult Index(int dias)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult VendasMensal(int dias)
+        {
+            return View();
+        }
+        
+        [HttpGet]
+        public IActionResult VendasSemanal(int dias)
+        {
+            return View();
+        }
+    }
+}
