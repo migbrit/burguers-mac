@@ -11,7 +11,7 @@ namespace LanchesMac.Migrations
             migrationBuilder.Sql("INSERT INTO Categorias(CategoriaNome, Descricao) " +
                 "VALUES('Normal','Lanche feito com ingredientes normais')");
 
-            migrationBuilder.Sql("INSERT INTO Categorias(CategoriaNome, Descricao) " +
+            migrationBuilder.Sql("INSERT INTO Categorias(CategoriaNome,Descricao) " +
                 "VALUES('Natural','Lanche feito com ingredientes integrais e naturais')");
         }
 

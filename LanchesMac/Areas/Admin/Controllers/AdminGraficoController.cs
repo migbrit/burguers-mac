@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using LanchesMac.Areas.Admin.Services;
 using Microsoft.AspNetCore.Authorization;
-using LanchesMac.Areas.Admin.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LanchesMac.Areas.Admin.Controllers
 {
@@ -18,7 +18,7 @@ namespace LanchesMac.Areas.Admin.Controllers
         {
             var lanchesVendasTotais = _graficosVendaService.GetVendasLanche(dias);
             return Json(lanchesVendasTotais);
-        } 
+        }
 
         [HttpGet]
         public IActionResult Index(int dias)
@@ -31,7 +31,7 @@ namespace LanchesMac.Areas.Admin.Controllers
         {
             return View();
         }
-        
+
         [HttpGet]
         public IActionResult VendasSemanal(int dias)
         {
