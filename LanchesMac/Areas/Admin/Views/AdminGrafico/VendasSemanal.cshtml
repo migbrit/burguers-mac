@@ -14,7 +14,7 @@
     function CarregaDados() {
         $.ajax({
             url: '@Url.Action("VendasLanches", "AdminGrafico")',
-            data: { dias: 30 },
+            data: { dias: 7 },
             dataType: "json",
             type: "GET",
             error: function (xhr, status, error) {
@@ -38,13 +38,10 @@
         });
         var data = google.visualization.arrayToDataTable(dataArray);
         var options = {
-            title: 'Lanches - Vendas nos últimos 30 dias',
+            title: 'Lanches - Vendas nos últimos 7 dias',
 
-            animation:{
-                duration: 3000,
-                easing: 'out',
-                startup: true
-            },
+            curveType: 'function',
+            legend: {position : 'bottom'},
 
             chartArea: {
                 width: '70%'
@@ -58,7 +55,7 @@
                 title: 'Lanches'
             }
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
     }
 </script>
