@@ -31,6 +31,7 @@ builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 builder.Services.AddScoped<RelatorioVendasService>();
 builder.Services.AddScoped<GraficosVendaService>();
+builder.Services.AddScoped<RelatorioLanchesService>();
 
 builder.Services.AddAuthorization(options => { options.AddPolicy("Admin", politica => { politica.RequireRole("Admin"); }); });
 
