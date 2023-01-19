@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FastReport.OpenSource" Version="2023.1.8" />
+    <PackageReference Include="FastReport.OpenSource.Data.MsSql" Version="2021.4.0" />
+    <PackageReference Include="FastReport.OpenSource.Export.PdfSimple" Version="2023.1.8" />
+    <PackageReference Include="FastReport.OpenSource.Web" Version="2023.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
       <PrivateAssets>all</PrivateAssets>
@@ -25,6 +29,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="ReflectionIT.Mvc.Paging" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\reports\" />
   </ItemGroup>
 
 </Project>
