@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\lanche_carousel01.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FastReport.OpenSource" Version="2023.1.8" />
     <PackageReference Include="FastReport.OpenSource.Data.MsSql" Version="2021.4.0" />
     <PackageReference Include="FastReport.OpenSource.Export.PdfSimple" Version="2023.1.8" />
